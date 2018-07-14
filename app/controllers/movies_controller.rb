@@ -1,4 +1,4 @@
-require 'HTTParty'
+require 'httparty'
 require 'pp'
 
 class MoviesController < ApplicationController
@@ -18,5 +18,4 @@ def index
       end
     end
 
-response = HTTParty.get('https://catfact.ninja/facts?limit=10')
-
+end
