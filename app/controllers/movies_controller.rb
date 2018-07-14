@@ -17,6 +17,20 @@ def index
     #     movie.picture = response_body ['Picture']
     #     movie.favorite = release_year['favorite']
       end
+
+      def new
+        @movie = Movie.new
+      end
+
+      def create
+        @movie = Movie.new(movie_params)
+      end
+
+      private
+      def movie_params
+        params.require(:movie).permit(:title,:genre, :year, )
+      end
+
     end
 
 
